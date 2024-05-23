@@ -1,0 +1,2 @@
+#!/bin/bash -e
+venv/bin/mypy --config-file mypy.toml project

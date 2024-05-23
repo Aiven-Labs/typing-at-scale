@@ -1,0 +1,18 @@
+[tool.mypy]
+pretty = true
+plugins = [
+  "pydantic.mypy"
+]
+
+[[tool.mypy.overrides]]
+module = [ "project.strict", "project.options" ]
+strict = true
+disallow_untyped_calls = false
+
+[[tool.mypy.overrides]]
+module = [  "project.progressive" ]
+strict = false
+check_untyped_defs = false
+disallow_untyped_defs = false
+
+
